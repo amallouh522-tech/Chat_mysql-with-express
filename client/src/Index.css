@@ -1,0 +1,173 @@
+/* Reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+    min-height: 100vh;
+}
+
+/* ================= Login Page ================= */
+
+.Login .head{
+    text-align: center;
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.Login .inputs{
+    width: 420px;
+    max-width: 90%;
+    background: #fff;
+    border-radius: 14px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.Login .inputs .inp{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    outline: none;
+    transition: 0.3s;
+}
+
+.Login .inputs .inp:focus{
+    border-color: #1128ff;
+    box-shadow: 0 0 0 3px rgba(17,40,255,0.15);
+}
+
+.Login .inputs .btn{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #1128ff;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Login .inputs .btn:hover{
+    background: #0d1ec7;
+}
+
+.Login .inputs p{
+    font-size: 15px;
+}
+
+.Login .inputs p a{
+    color: #c0862f;
+    text-decoration: none;
+}
+
+.Login .inputs p a:hover{
+    text-decoration: underline;
+}
+
+/* ================= NavBar ================= */
+
+.NavBar{
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.NavBar nav{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    align-items: center;
+}
+
+.NavBar nav span{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.NavBar nav ul{
+    display: flex;
+    gap: 25px;
+}
+
+.NavBar nav ul li{
+    list-style: none;
+}
+
+.NavBar nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    position: relative;
+}
+
+.NavBar nav ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1128ff;
+    transition: 0.3s;
+}
+
+.NavBar nav ul li a:hover::after{
+    width: 100%;
+}
+
+.charge .inputs{
+    width: 420px;
+    max-width: 90%;
+    background: #fff;
+    border-radius: 14px;
+    margin: 60px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.charge .inputs .inp{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    outline: none;
+    transition: 0.3s;
+}
+
+.charge .inputs .inp:focus{
+    border-color: #1128ff;
+    box-shadow: 0 0 0 3px rgba(17,40,255,0.15);
+}
+
+.charge .inputs .btn{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #1128ff;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
