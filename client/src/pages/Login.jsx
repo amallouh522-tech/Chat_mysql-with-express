@@ -41,8 +41,8 @@ export default function Login() {
       </div>
       <div className="inputs">
         <h2 style={{ color: "red" }}>{massege} <br /></h2>
-        <input ref={passwordRef} placeholder='Enter username' className="inp" type="text" />
-        <input ref={usernameRef} placeholder='Enter password' className="inp" type="password" />
+        <input ref={usernameRef} placeholder='Enter username' className="inp" type="text" />
+        <input ref={passwordRef} placeholder='Enter password' className="inp" type="password" />
         <button onClick={LoginFetch} className="btn">Login</button>
         <p>You have not account yet ? <Link to={"/SignUp"}>Go To Sign UP</Link></p>
       </div>
