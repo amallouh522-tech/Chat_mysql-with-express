@@ -11,17 +11,24 @@ const io = new Server(server , {});
 const PORT = 3000;
 
 app.use(cors({
-    origin:"*"
+    origin: "http://localhost:5173", // أو بورت Vite تبعك
+    credentials: true
 }));
+
 
 app.use(express.json());
 
-
 app.use(session({
-    secret:"BLABLABLA@4nfgkg39rhg459hjb",
-    saveUninitialized:false,
-    resave:false
+    secret: "BLABLABLA@4nfgkg39rhg459hjb",
+    saveUninitialized: false,
+    resave: false,
+    cookie: {
+        httpOnly: true,
+        secure: false // localhost فقط
+    }
 }));
+
+
 
 const DB = mysql.createConnection({
     host:"localhost",
@@ -91,6 +98,19 @@ app.post("/api/register" , (req , res) => {
         }
     );
 });
+
+app.post("/api/mustlogin" , ( req , res) => {
+    if (req.session.username) {
+        res.json({Islogin : true});
+    }else{
+        res.json({Islogin : false});
+    };
+});
+
+app.post("/api/logout" , (req , res) => {
+    req.session.destroy();
+    res.json({succ : true});
+})
 
 server.listen(PORT , () => {
     console.log(`server Starts on http://localhost:${PORT}`);

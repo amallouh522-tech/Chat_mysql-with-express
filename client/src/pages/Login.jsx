@@ -18,10 +18,12 @@ export default function Login() {
       setmassege("Please Enter Data")
     } else {
       try {
-        const response = await axios.post('http://localhost:3000/api/login', {
-          username,
-          password
-        });
+        const response = await axios.post(
+          "http://localhost:3000/api/login",
+          { username, password },
+          { withCredentials: true }
+        );
+
         const result = await response.data;
         if (result.Succ) {
           navigate("/home")
@@ -41,8 +43,8 @@ export default function Login() {
       </div>
       <div className="inputs">
         <h2 style={{ color: "red" }}>{massege} <br /></h2>
-        <input ref={usernameRef} placeholder='Enter username' className="inp" type="text" />
-        <input ref={passwordRef} placeholder='Enter password' className="inp" type="password" />
+        <input name='username' ref={usernameRef} placeholder='Enter username' className="inp" type="text" />
+        <input name='password' ref={passwordRef} placeholder='Enter password' className="inp" type="password" />
         <button onClick={LoginFetch} className="btn">Login</button>
         <p>You have not account yet ? <Link to={"/SignUp"}>Go To Sign UP</Link></p>
       </div>
