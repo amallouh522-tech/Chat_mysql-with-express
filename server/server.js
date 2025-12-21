@@ -112,6 +112,10 @@ app.post("/api/logout" , (req , res) => {
     res.json({succ : true});
 })
 
+io.on("connection" , (socket) => {
+    console.log(`socket id : ${socket.id}`);
+});
+
 server.listen(PORT , () => {
     console.log(`server Starts on http://localhost:${PORT}`);
 });
