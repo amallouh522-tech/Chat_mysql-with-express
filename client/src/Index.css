@@ -131,22 +131,19 @@ body{
     width: 100%;
 }
 
-.charge .inputs{
-    width: 420px;
-    max-width: 90%;
-    background: #fff;
-    border-radius: 14px;
-    margin: 60px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-    padding: 25px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+.Addpost .inputs{
+    width: 60%;
+    height: fit-content;
+    padding: 10px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
 }
 
-.charge .inputs .inp{
-    width: 100%;
+.Addpost .inputs .title , .Addpost .inputs .text{
+    width: 60%;
+    margin: 10px auto;
+    border-radius: 10px;
     font-size: 18px;
     padding: 10px 14px;
     border-radius: 10px;
@@ -155,13 +152,8 @@ body{
     transition: 0.3s;
 }
 
-.charge .inputs .inp:focus{
-    border-color: #1128ff;
-    box-shadow: 0 0 0 3px rgba(17,40,255,0.15);
-}
-
-.charge .inputs .btn{
-    width: 100%;
+.Addpost .inputs .btn{
+    width: 50%;
     font-size: 18px;
     padding: 10px;
     border-radius: 10px;
@@ -170,4 +162,9 @@ body{
     color: #fff;
     cursor: pointer;
     transition: 0.3s;
+    margin: auto;
+}
+
+.Addpost .inputs .btn:hover{
+    background: #0d1ec7;
 }

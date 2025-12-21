@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Logout from "./pages/Logout";
 import Chat from "./pages/Chat";
+import Addposts from "./pages/Addposts";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/home" element={<Home/>}/>
         <Route path="/SignUP" element={<SignUp/>}/>
         <Route path="/chat" element={<Chat/>}/>
+        <Route path="/addpost" element={<Addposts/>}/>
       </Routes>
     </BrowserRouter>
   );
