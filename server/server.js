@@ -15,7 +15,7 @@ const io = new Server(server , {
 const PORT = 3000;
 
 app.use(cors({
-    origin: "http://localhost:5173", // أو بورت Vite تبعك
+    origin: "http://localhost:5173",
     credentials: true
 }));
 
@@ -28,7 +28,7 @@ app.use(session({
     resave: false,
     cookie: {
         httpOnly: true,
-        secure: false // localhost فقط
+        secure: false
     }
 }));
 
@@ -45,7 +45,7 @@ DB.connect((err) => {
     if (err) {
         console.error(err);
     }else{
-        console.log("Dtabase Connected");
+        console.log("Database Connected");
     };
 });
 
@@ -115,6 +115,24 @@ app.post("/api/logout" , (req , res) => {
     req.session.destroy();
     res.json({succ : true});
 })
+
+app.post("/api/addpost" , (req , res) => {
+    const {title,text} = req.body;
+    DB.query(
+        "INSERT INTO `posts`(`user`, `title`, `Text` , `Likes`) VALUES ( ? , ? , ? , ?)",
+        [req.session.username , title , text , 0],
+        (err , result) => {
+            if (err) {
+                console.error(err);
+            };
+            if (result.affectedRows > 0) {
+                res.json({succ : true});
+            }else{
+                res.json({succ : false});
+            };
+        }
+    );
+});
 
 io.on("connection" , (socket) => {
     console.log(`socket id : ${socket.id}`);

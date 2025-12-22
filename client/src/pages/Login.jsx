@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate, Link } from "react-router-dom"
 import axios from "axios";
+import { mustLoginFetch } from '../JS/functions';
 
 
 export default function Login() {
@@ -9,6 +10,18 @@ export default function Login() {
   const navigate = useNavigate();
 
   const [massege, setmassege] = useState(null)
+
+  useEffect(() => {
+    async function Check() {
+      const result = await mustLoginFetch();
+      if (result) {
+        navigate("/home");
+      }
+    };
+
+    Check();
+  }, []);
+
 
   async function LoginFetch() {
     const username = usernameRef.current.value;
@@ -19,7 +32,7 @@ export default function Login() {
     } else {
       try {
         const response = await axios.post(
-          "http://localhost:3000/api/login",
+          "/api/login",
           { username, password },
           { withCredentials: true }
         );
