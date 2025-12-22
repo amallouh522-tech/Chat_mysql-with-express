@@ -8,7 +8,7 @@ export async function mustLoginFetch() {
     );
 
     return response.data.Islogin === true;
-}
+};
 
 
 export async function LogoutFetch() {
@@ -19,5 +19,5 @@ export async function LogoutFetch() {
     );
 
     return response.data.succ === true;
-}
+};
 

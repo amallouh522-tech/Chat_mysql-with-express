@@ -1,33 +1,35 @@
 /* Reset */
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, sans-serif;
 }
 
-body{
+body {
     background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
     min-height: 100vh;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* يمنع السكرول العام */
+    overflow: hidden;
+    /* يمنع السكرول العام */
 }
 
 /* ================= Login Page ================= */
 
-.Login .head{
+.Login .head {
     text-align: center;
     background: #fff;
     padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.Login .inputs{
+.Login .inputs {
     width: 420px;
     max-width: 90%;
     background: #fff;
@@ -38,10 +40,10 @@ html, body {
     gap: 12px;
     text-align: center;
     padding: 25px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-.Login .inputs .inp{
+.Login .inputs .inp {
     width: 100%;
     font-size: 18px;
     padding: 10px 14px;
@@ -51,12 +53,12 @@ html, body {
     transition: 0.3s;
 }
 
-.Login .inputs .inp:focus{
+.Login .inputs .inp:focus {
     border-color: #1128ff;
-    box-shadow: 0 0 0 3px rgba(17,40,255,0.15);
+    box-shadow: 0 0 0 3px rgba(17, 40, 255, 0.15);
 }
 
-.Login .inputs .btn{
+.Login .inputs .btn {
     width: 100%;
     font-size: 18px;
     padding: 10px;
@@ -68,32 +70,32 @@ html, body {
     transition: 0.3s;
 }
 
-.Login .inputs .btn:hover{
+.Login .inputs .btn:hover {
     background: #0d1ec7;
 }
 
-.Login .inputs p{
+.Login .inputs p {
     font-size: 15px;
 }
 
-.Login .inputs p a{
+.Login .inputs p a {
     color: #c0862f;
     text-decoration: none;
 }
 
-.Login .inputs p a:hover{
+.Login .inputs p a:hover {
     text-decoration: underline;
 }
 
 /* ================= NavBar ================= */
 
-.NavBar{
+.NavBar {
     width: 100%;
     background: #fff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
-.NavBar nav{
+.NavBar nav {
     max-width: 1200px;
     margin: auto;
     display: flex;
@@ -102,28 +104,28 @@ html, body {
     align-items: center;
 }
 
-.NavBar nav span{
+.NavBar nav span {
     font-weight: 600;
     font-size: 24px;
 }
 
-.NavBar nav ul{
+.NavBar nav ul {
     display: flex;
     gap: 25px;
 }
 
-.NavBar nav ul li{
+.NavBar nav ul li {
     list-style: none;
 }
 
-.NavBar nav ul li a{
+.NavBar nav ul li a {
     text-decoration: none;
     color: #000;
     font-weight: 500;
     position: relative;
 }
 
-.NavBar nav ul li a::after{
+.NavBar nav ul li a::after {
     content: "";
     position: absolute;
     bottom: -4px;
@@ -134,13 +136,102 @@ html, body {
     transition: 0.3s;
 }
 
-.NavBar nav ul li a:hover::after{
+.NavBar nav ul li a:hover::after {
     width: 100%;
+}
+
+
+.home .content .chatside {
+    background: #fff;
+    width: 20%;
+    height: 100vh;
+    display: inline-block;
+    overflow-y: auto;
+}
+
+.home {
+    width: 100%;
+}
+
+.home .chatside .head {
+    text-align: center;
+}
+
+.home .content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.home .chatside .id {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+    margin: 6px auto;
+}
+
+.home .chatside .id h2 , img{
+    margin: 0 4px;
+}
+
+.home .chatside .id {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    position: relative;
+}
+
+.home .chatside .id::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1128ff;
+    transition: 0.3s;
+}
+
+.home .chatside .id:hover::after {
+    width: 100%;
+}
+
+
+.home .chatside .id::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1128ff;
+    transition: 0.3s;
+}
+
+.chatside::-webkit-scrollbar {
+    width: 8px;
+}
+.chatside{
+    height: 90vh !important;
+}
+.chatside::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+.chatside::-webkit-scrollbar-thumb {
+    background-color: #1128ff;
+    border-radius: 10px;
 }
 
 /* ================= Add Post ================= */
 
-.Addpost .inputs{
+.Addpost .inputs {
     width: 60%;
     max-width: 90%;
     height: fit-content;
@@ -151,7 +242,8 @@ html, body {
     text-align: center;
 }
 
-.Addpost .inputs .title , .Addpost .inputs .text{
+.Addpost .inputs .title,
+.Addpost .inputs .text {
     width: 80%;
     margin: 10px auto;
     font-size: 18px;
@@ -162,7 +254,7 @@ html, body {
     transition: 0.3s;
 }
 
-.Addpost .inputs .btn{
+.Addpost .inputs .btn {
     width: 50%;
     font-size: 18px;
     padding: 10px;
@@ -175,22 +267,19 @@ html, body {
     margin: 10px auto;
 }
 
-.Addpost .inputs .btn:hover{
+.Addpost .inputs .btn:hover {
     background: #0d1ec7;
 }
 
 /* ================= Posts ================= */
-.posts{
-    width: 60%;
-    max-width: 90%;
-    height: calc(100vh - 150px); /* مساحة كافية للـ NavBar و AddPost */
+.posts {
+    width: 80%;
+    height: 90vh;
     overflow-y: auto;
     padding: 20px;
-    margin: 30px auto 50px auto; /* مساحة أكبر فوق وتحت */
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: inline-block;
 }
 
 
@@ -210,22 +299,22 @@ html, body {
     border-radius: 10px;
 }
 
-.posts .post{
+.posts .post {
     width: 100%;
     padding: 20px;
     margin-bottom: 15px;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(17,40,255,0.1);
+    box-shadow: 0 5px 15px rgba(17, 40, 255, 0.1);
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
 
-.posts .post .LikeBtn{
+.posts .post .LikeBtn {
     padding: 8px 12px;
     width: fit-content;
-    background: #1128ff;
-    color: #fff;
+    background: none;
+    color: #000000;
     border: none;
     border-radius: 8px;
     margin: 10px;
@@ -234,16 +323,14 @@ html, body {
     transition: background 0.3s;
 }
 
-.posts .post .LikeBtn:hover{
+.posts .post .LikeBtn:hover {
     background: #0d1ec7;
 }
 
-.posts .post .h2{
+.posts .post .h2 {
     font-size: 22px;
     width: fit-content;
     font-weight: 700;
     margin-bottom: 10px;
     color: #000000;
 }
-
-
