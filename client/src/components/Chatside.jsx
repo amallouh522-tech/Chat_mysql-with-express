@@ -4,12 +4,12 @@ import Chatsid from './Chatsid'
 
 export default function Chatside() {
     return (
-        <div className='chatside'>
-            <div className="head">
+        <Stack className='chatside'>
+            <Stack className="head">
                 <h2>Chats</h2>
-            </div>
+            </Stack>
             <Stack className='chats'>
             </Stack>
-        </div>
+        </Stack>
     )
 }

@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { Link } from "react-router-dom"
 import axios from "axios";
 import { useState } from 'react';
+import Stack from '@mui/material/Stack';
 
 
 export default function SignUp() {
@@ -40,18 +41,18 @@ export default function SignUp() {
   };
 
   return (
-    <div className='Login'>
-      <div className="head">
+    <Stack className='Login'>
+      <Stack className="head">
         <h2>Sign UP - Anizy Store</h2>
-      </div>
-      <div className="inputs">
+      </Stack>
+      <Stack className="inputs">
         <h2 style={{ color: massege ? massege[1] : "black" }}>{massege ? massege[0] : <br />}</h2>
         <input type="text" placeholder='Enter username' ref={usernameRef} className="inp" />
         <input type="email" placeholder='Enter Email' ref={EmailRef} className="inp" />
         <input type="password" placeholder='Enter password' ref={passwordRef} className="inp" />
         <button onClick={RegisterFetch} className="btn">Sign Up</button>
         <p>You already have Accout ? <Link to={"/"}>Go To Sign In</Link></p>
-      </div>
-    </div>
+      </Stack>
+    </Stack>
   )
 }

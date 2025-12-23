@@ -21,3 +21,14 @@ export async function LogoutFetch() {
     return response.data.succ === true;
 };
 
+
+export async function Getusername() {
+    const response = await axios.post(
+        "/api/Getuserdata",
+        {},
+        { withCredentials: true }
+    );
+    return response.data.username;
+}
+
+

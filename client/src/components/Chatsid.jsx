@@ -7,7 +7,6 @@ export default function Chatsid({number}) {
     <Link className='id'>
         <img src="/img/username.png" />
         <h2>username {number}</h2>
-        
     </Link>
   )
 }

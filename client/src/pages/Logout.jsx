@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { LogoutFetch } from '../JS/functions'
 import { useNavigate } from "react-router-dom";
+import Stack from '@mui/material/Stack';
 
 export default function Logout() {
   const navigate = useNavigate();
@@ -23,9 +24,9 @@ export default function Logout() {
   }, []);
 
   return (
-    <div>
+    <Stack>
       <h2>{Loading ? true : "loading"}</h2>
       <h2>{massege}</h2>
-    </div>
+    </Stack>
   );
 };

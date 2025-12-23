@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
-import { mustLoginFetch } from '../JS/functions';
+import { Getusername, mustLoginFetch } from '../JS/functions';
 import { useNavigate } from 'react-router-dom';
 import Posts from '../components/Posts';
 import socket from '../JS/socket';
@@ -18,20 +18,30 @@ export default function Home() {
       const result = await mustLoginFetch();
       if (!result) {
         navigate("/");
-      };
+      }
     };
 
     socket.on("connect", () => {
-      console.log("connected");
+      
     });
-    Check()
+    Check();
+
+    async function Setusername() {
+      const username = await Getusername();
+      setusername(username);
+    };
+
+    Setusername();
+
   }, []);
+
 
   return (
     <div className='home'>
-      <NavBar PageName={"Home"}
+      <NavBar PageName={`Hello ${username}`}
         First={["/logout", "Logout"]}
         Scond={["/addpost", "Add new Post"]}
+        third={["/chat" , "chat"]}
       />
       <div className='content'>
         <Chatside />

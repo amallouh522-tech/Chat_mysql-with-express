@@ -134,6 +134,9 @@ app.post("/api/addpost", (req, res) => {
     );
 });
 
+app.post("/api/Getuserdata" , (req , res) => {
+    res.json({username : req.session.username});
+})
 
 io.on("connection", (socket) => {
     console.log(`socket id : ${socket.id}`);

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate, Link } from "react-router-dom"
 import axios from "axios";
 import { mustLoginFetch } from '../JS/functions';
+import Stack from '@mui/material/Stack';
 
 
 export default function Login() {
@@ -50,17 +51,17 @@ export default function Login() {
   }
 
   return (
-    <div className='Login'>
-      <div className="head">
+    <Stack className='Login'>
+      <Stack className="head">
         <h2>Login - Anizy Store</h2>
-      </div>
-      <div className="inputs">
+      </Stack>
+      <Stack className="inputs">
         <h2 style={{ color: "red" }}>{massege} <br /></h2>
         <input name='username' ref={usernameRef} placeholder='Enter username' className="inp" type="text" />
         <input name='password' ref={passwordRef} placeholder='Enter password' className="inp" type="password" />
         <button onClick={LoginFetch} className="btn">Login</button>
         <p>You have not account yet ? <Link to={"/SignUp"}>Go To Sign UP</Link></p>
-      </div>
-    </div>
+      </Stack>
+    </Stack>
   )
 }

@@ -52,6 +52,7 @@ export default function Addposts() {
       <NavBar PageName={"Add new post"}
         First={["/logout", "Logout"]}
         Scond={["/home", "Home"]}
+        third={["/chat" , "chat"]}
       />
       <Stack className='inputs'>
         <h2 style={{ color: msg ? msg[0] : "black" }}>{msg ? msg[1] : <br />}</h2>

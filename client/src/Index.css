@@ -175,7 +175,8 @@ body {
     margin: 6px auto;
 }
 
-.home .chatside .id h2 , img{
+.home .chatside .id h2,
+img {
     margin: 0 4px;
 }
 
@@ -216,9 +217,12 @@ body {
 .chatside::-webkit-scrollbar {
     width: 8px;
 }
-.chatside{
+
+.chatside {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     height: 90vh !important;
 }
+
 .chatside::-webkit-scrollbar-track {
     background: #e0e0e0;
     border-radius: 10px;
@@ -310,7 +314,7 @@ body {
 }
 
 
-.post .PostContent{
+.post .PostContent {
     margin: 3px;
 }
 
