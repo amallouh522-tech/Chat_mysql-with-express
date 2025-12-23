@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Stack from '@mui/material/Stack';
 import socket from '../JS/socket';
-import PostDt from './PostDt'
+import PostsInf from './PostsInf';
 
 export default function Posts() {
 
@@ -17,7 +17,7 @@ export default function Posts() {
     function PostsMap() {
         if (posts.length > 0) {
             posts.map((post, index) => (
-                <PostDt key={index} id={post.id} username={post.user} title={post.title} text={post.Text} Likes={post.Likes} />
+                <PostsInf key={index} id={post.id} username={post.user} title={post.title} text={post.Text} Likes={post.Likes} />
             ))
         }else{
             return(

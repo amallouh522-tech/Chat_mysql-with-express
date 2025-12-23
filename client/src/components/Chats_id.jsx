@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 import React from 'react'
 
 
-export default function Chatsid({number}) {
+export default function Chats_id({number}) {
   return (
     <Link className='id'>
         <img src="/img/username.png" />

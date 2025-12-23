@@ -4,8 +4,8 @@ import { Getusername, mustLoginFetch } from '../JS/functions';
 import { useNavigate } from 'react-router-dom';
 import Posts from '../components/Posts';
 import socket from '../JS/socket';
-import Chatside from '../components/Chatside';
 import axios from 'axios';
+import OpenedChats from '../components/OpendChats';
 
 
 
@@ -44,7 +44,7 @@ export default function Home() {
         third={["/chat" , "chat"]}
       />
       <div className='content'>
-        <Chatside />
+        <OpenedChats />
         <Posts />
       </div>
     </div>

@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
 
 
-export default function PostDt({ id, username, title, text, Likes }) {
+export default function PostsInf({ id, username, title, text, Likes }) {
   return (
     <Stack id={id} className='post'>
       <Chip className='h2' label={username} variant='outlined' />
