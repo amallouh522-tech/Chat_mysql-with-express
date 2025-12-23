@@ -137,6 +137,20 @@ app.post("/api/addpost", (req, res) => {
 
 io.on("connection", (socket) => {
     console.log(`socket id : ${socket.id}`);
+    socket.on("loadposts", () => {
+        DB.query(
+            "SELECT * FROM `posts`",
+            [],
+            (err, result) => {
+                if (err) {
+                    console.error(err);
+                };
+                if (result.length > 0) {
+                    socket.emit("reversposts", result);
+                };
+            }
+        );
+    });
 });
 
 server.listen(PORT, () => {

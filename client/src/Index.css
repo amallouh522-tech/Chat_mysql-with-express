@@ -310,6 +310,10 @@ body {
 }
 
 
+.post .PostContent{
+    margin: 3px;
+}
+
 .posts .post .LikeBtn {
     padding: 8px 12px;
     width: fit-content;
@@ -328,7 +332,7 @@ body {
 }
 
 .posts .post .h2 {
-    font-size: 22px;
+    font-size: 26px;
     width: fit-content;
     font-weight: 700;
     margin-bottom: 10px;
